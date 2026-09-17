@@ -1,5 +1,4 @@
 name: APK Build
-
 on:
   pull_request: { }
   push:
