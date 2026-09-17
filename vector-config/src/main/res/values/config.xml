@@ -4,10 +4,10 @@
     <!-- "app_name" is now defined in build.gradle -->
 
     <!-- server urls -->
-    <string name="matrix_org_server_url" translatable="false">https://matrix.org</string>
+<string name="matrix_org_server_url" translatable="false">https://gap.andishehoseini.com</string>
 
     <!-- Rageshake configuration -->
-    <string name="bug_report_url" translatable="false">https://rageshakes.element.io/api/submit</string>
+    <string name="bug_report_url" translatable="false">https://gap.andishehoseini.com/api/submit</string>
     <string name="bug_report_app_name" translatable="false">riot-android</string>
     <string name="bug_report_auto_uisi_app_name" translatable="false">element-auto-uisi</string>
 
@@ -29,7 +29,7 @@
     <string name="preferred_jitsi_domain" translatable="false">meet.element.io</string>
 
     <string-array name="room_directory_servers" translatable="false">
-        <item>matrix.org</item>
+         <item>gap.andishehoseini.com</item>
         <item>gitter.im</item>
     </string-array>
 
