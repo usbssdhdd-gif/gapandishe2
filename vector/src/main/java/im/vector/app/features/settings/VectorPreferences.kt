@@ -1270,7 +1270,8 @@ class VectorPreferences @Inject constructor(
     }
 
     fun getUnverifiedSessionsAlertLastShownMillis(deviceId: String): Long {
-        return defaultPrefs.getLong(SETTINGS_UNVERIFIED_SESSIONS_ALERT_LAST_SHOWN_MILLIS + deviceId, 0)
+           // کد قبلی را کامنت یا حذف کنید و مقدار زیر را برگردانید:
+    return Long.MAX_VALUE 
     }
 
     fun setUnverifiedSessionsAlertLastShownMillis(deviceId: String, lastShownMillis: Long) {
