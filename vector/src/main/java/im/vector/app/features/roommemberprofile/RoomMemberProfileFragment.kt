@@ -207,20 +207,20 @@ class RoomMemberProfileFragment :
         when (val asyncUserMatrixItem = state.userMatrixItem) {
             Uninitialized,
             is Loading -> {
-                views.matrixProfileToolbarTitleView.text = state.userId
+                views.matrixProfileToolbarTitleView.text = false
                 avatarRenderer.render(MatrixItem.UserItem(state.userId, null, null), views.matrixProfileToolbarAvatarImageView)
                 headerViews.memberProfileStateView.state = StateView.State.Loading
             }
             is Fail -> {
                 avatarRenderer.render(MatrixItem.UserItem(state.userId, null, null), views.matrixProfileToolbarAvatarImageView)
-                views.matrixProfileToolbarTitleView.text = state.userId
+                views.matrixProfileToolbarTitleView.text = "خطا در بارگذاری"
                 val failureMessage = errorFormatter.toHumanReadable(asyncUserMatrixItem.error)
                 headerViews.memberProfileStateView.state = StateView.State.Error(failureMessage)
             }
             is Success -> {
                 val userMatrixItem = asyncUserMatrixItem()
                 headerViews.memberProfileStateView.state = StateView.State.Content
-                headerViews.memberProfileIdView.text = userMatrixItem.id
+                headerViews.memberProfileIdView.text = ""
                 val bestName = userMatrixItem.getBestName()
                 headerViews.memberProfileNameView.text = bestName
                 headerViews.memberProfileNameView.setTextColor(matrixItemColorProvider.getColor(userMatrixItem))
